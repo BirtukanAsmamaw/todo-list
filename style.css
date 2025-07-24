@@ -58,10 +58,12 @@ button{
 ul li{
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 50px;
+    padding: 12px 8px 12px 50px; /* Left padding for icon space */
     user-select: none;
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center; /* Vertically center text with icon */
 }
 ul li::before{
     content: '';
@@ -72,8 +74,9 @@ ul li::before{
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
-    left: 8px;
+    top: 50%;          /* Center vertically */
+    left: 12px;
+    transform: translateY(-50%); /*perfect vertical centering */
 }
 ul li.checked{
     cursor: #555;
